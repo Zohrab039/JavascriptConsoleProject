@@ -15,6 +15,7 @@ while(true){
         console.log('All tasks');
     }else if(input == '3'){
         console.log('Logged out');
+        break;
     }else{
         console.log('Wrong order selected!');
     }
