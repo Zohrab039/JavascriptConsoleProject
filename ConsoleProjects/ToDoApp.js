@@ -7,12 +7,26 @@ let manual = `
 3. Press 3 to add To Do.
 3. Press 4 to exit the system.
 `
-console.log(manual);
 
-function showAllToDo(){
-
+let allToDo = [];
+class ToDo{
+    constructor(subtask, reminderTime){
+        this.subtask = subtask;
+        this.reminderTime = reminderTime;
+    }
+    showToDoDetails(){
+        console.log(`Subtask Title: ${this.subtask}, Reminder Time: ${this.reminderTime}`);
+    }
 }
 
+function showAllToDo(){
+    let subtask = prompt('Enter a subtask: ');
+    let reminderTime = prompt('Enter a valid date: ');
+    let newToDo = new ToDo(subtask, reminderTime);
+    allToDo.push()
+}
+
+console.log(manual);
 
 
 // Göstərilən əməliyyatların console-da çağırıldıqdan sonra avtomatik olaraq bağlanmaması üçün while loop-undan istifadə edirik
