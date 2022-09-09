@@ -7,12 +7,39 @@ let manual = `
 3. Press 3 to exit the system.
 `
 
+let allTasks = [];
+
+class Tasks {
+    constructor(taskSubject, taskReminder){
+        this.taskSubject = taskSubject;
+        this.taskReminder = taskReminder;
+    }
+    showTasksDetails(){
+        console.log(`Task subject: ${this.taskSubject}, Task date: ${this.taskReminder}`);
+    }
+}
+
+function addNewTask(){
+    let taskSubject = prompt('Enter task subject: ');
+    let taskReminder = prompt('Enter task reminder date: ');
+    let task = new Tasks(taskSubject, taskReminder);
+    allTasks.push(task);
+}
+
+function showTasks(){
+    for(task of allTasks){
+        task.showTasksDetails();
+    }
+}
+
+console.log(manual);
+
 while(true){
     let input = prompt('Please choose an order: ');
     if(input == '1'){
-        console.log('New Task added successfully!');
+        addNewTask();
     }else if(input == '2'){
-        console.log('All tasks');
+        showTasks();
     }else if(input == '3'){
         console.log('Logged out');
         break;
@@ -20,5 +47,3 @@ while(true){
         console.log('Wrong order selected!');
     }
 }
-
-console.log(manual);
