@@ -3,7 +3,7 @@ let prompt = require('prompt-sync')();
 let manual = `
 1. Sistemə daxil olmaq üçün 1 düyməsinə basın.
 2. Bütün istifadəçilərin məlumatlarını görmək üçün 2 düyməsinə basın.
-2. Sistemdən çıxmaq üçün 3 düyməsinə basın.
+3. Sistemdən çıxmaq üçün 3 düyməsinə basın.
 `
 
 let users = [];
